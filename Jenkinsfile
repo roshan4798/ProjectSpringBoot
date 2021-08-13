@@ -4,14 +4,10 @@ pipeline {
  
 
     stages {
-        stage('Checking Version') {
-            steps {
-                sh 'javac -version'
-            }
-        }
+        
         stage('Build') {
             steps {
-                sh 'mvn clean package'
+                sh 'mvn -X clean -X package'
             }
         }
         
